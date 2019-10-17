@@ -31,19 +31,6 @@ print("")
 print ("Sorted array is:") 
 printArray(arr)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Extra Credit.
 #If you have N items (say 10) it requires N^2 (100) operations to sort the elmenents.
 #In computer science this is called having a Big O notation of N^2.  
@@ -51,3 +38,35 @@ printArray(arr)
 #When sorting, you can instead compare every element with half of all other elements.  Then repeat.
 #This results in Log(N) complexity on compares but still need the N for each element.  So
 #you get N*Log(N) which is drastically faster than N^2.
+
+########################################################################
+
+#the -i is an optimization. you can be certain that after the first pass through the array
+#the biggest number is at the back.
+
+def bubbleSort(arr): 
+    n = len(arr)
+    print("array size: " + str(n))
+    
+    for i in range(n):
+        print("index:", i)
+        for j in range(0, n-1-i): #the -i is the optimization
+            if arr[j] > arr[j+1] : 
+                #print("i:", i, "  j: ", j)
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+                print(arr)
+            else:
+                print(arr)
+
+# Driver code to test above 
+arr = [64, 34, 25, 90, 22, 11, 12] 
+ 
+print ("Initial array is:") 
+print(arr)
+print("")
+bubbleSort(arr)
+
+#ALTERNATIVELY, you can use pythons sort feature:
+
+sorted_arr = sorted(arr)
+print(sorted_arr)
