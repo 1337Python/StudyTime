@@ -1,0 +1,5 @@
+You have a blance scale.  It doesn't measure weight but wether or not two items weigh the same.
+You have 10 balls.  9 of them weigh the same.  Using only the scale, find the heavy ball.
+Do this in as few as steps as possible.
+
+

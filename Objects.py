@@ -47,4 +47,8 @@ nothing = NonObject()
 something = Object()
 print(something.name, ", ", something.age)
 
-named = NamedObject("Jon", 13)
+jon = NamedObject("Jon", 13)
+brad = NamedObject("Brad", 172)
+#jon and brad are the same object but have different member values.  aka they are different instances of the same object.
+#which you can see with their constructors/destructors
+#Notice that objects are destructed in the order they are constructed.  So Object is first, then Jon, then Brad.
